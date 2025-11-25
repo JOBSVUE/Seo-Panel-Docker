@@ -5,7 +5,7 @@ services:
     image: seopanel/seopanel:4.11.0
     container_name: seopanel
     ports:
-      - "80:80"
+      - "4800:80"
     env_file: .env
     depends_on:
       - db
@@ -15,7 +15,7 @@ services:
     container_name: seopanel_db
     env_file: .env
     volumes:
-      - db_data:/var/lib/mysql
+      - seopanel_db_data:/var/lib/mysql
 
 volumes:
-  db_data:
+  seopanel_db_data:
