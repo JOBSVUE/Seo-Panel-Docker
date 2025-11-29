@@ -8,9 +8,9 @@ services:
       - "4800:80"
     env_file: .env
     depends_on:
-      - db
+      - seopaneldb
 
-  db:
+  seopaneldb:
     image: mysql:5.7
     container_name: seopanel_db
     env_file: .env
